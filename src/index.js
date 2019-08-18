@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-const DimensionsReflection = React.createContext(null);
+const ReactLand = React.createContext(null);
 
 export const Provider = (props)=>{
   const domNode = useRef(null);
@@ -26,17 +26,17 @@ export const Provider = (props)=>{
 
   return (
       <div ref={domNode} style={{height: '100%'}}>
-        <DimensionsReflection.Provider value={dimensions}>
+        <ReactLand.Provider value={dimensions}>
 					{props.children}
-        </DimensionsReflection.Provider>
+        </ReactLand.Provider>
       </div>
   )
 };
 
 export const withContext=(ChildComponent)=>{
 	return (props)=>(
-			<DimensionsReflection.Consumer>
+			<ReactLand.Consumer>
 				{(dims)=>(<ChildComponent {...props} incomingDims={dims} />)}
-			</DimensionsReflection.Consumer>
+			</ReactLand.Consumer>
 		)
 };

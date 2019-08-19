@@ -17,6 +17,10 @@
   "author": "David O'Donovan <david@davidodonovan.com> ",
   "homepage": "https://github.com/DavidODonovan/reactland",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "react": "^16.9.0"
   }
 }

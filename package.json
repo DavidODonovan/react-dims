@@ -4,7 +4,7 @@
   "description": "A React Context for capturing the dimensions of any React DOM node",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
   },
   "keywords": [
     "react",

@@ -2,7 +2,7 @@
   "name": "reactland",
   "version": "1.0.0",
   "description": "A React Context for capturing the dimensions of any React DOM node",
-  "main": "./src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
   },

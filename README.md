@@ -33,7 +33,6 @@ const App=()=>{
 }
 
 export default App;
-
 ```
 
 Export the child component by passing it to the react-dims withContext( ) method, similar to using Redux connect( );

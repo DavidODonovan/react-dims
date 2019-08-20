@@ -22,10 +22,10 @@ import { Provider } from 'react-dims';
 
 const ParentNode=()=>{
 	return (
-              <Provider>
-                  <ChildNode/>
-              </Provider>
-	       )
+		  <Provider>
+			  <ChildNode/>
+		  </Provider>
+		)
 }
 export default ParentNode;
 
@@ -40,9 +40,8 @@ import { withContext } from 'react-dims';
 
 const ChildNode=({dims})=>{  
 	return (
-                <div>height is: {dims.height}</div
-	       )
-
+      <div>height is: {dims.height}</div
+	  )
 }
 
 export default withContext(ChildNode);
@@ -51,16 +50,16 @@ export default withContext(ChildNode);
 Leverages the native JavaScript Element.getBoundingClientRect() method, so props.dims will be an object that looks something like this;
 
 ```code
- {
-		bottom: 113,
-		height: 16,
-		left: 213.015625,
-		right: 286.96875,
-		top: 97,
-		width: 73.953125,
-		x: 213.015625,
-		y: 97
- }
+{
+	bottom: 113,
+	height: 16,
+	left: 213.015625,
+	right: 286.96875,
+	top: 97,
+	width: 73.953125,
+	x: 213.015625,
+	y: 97
+}
 ```
 ### Usage with Redux
 

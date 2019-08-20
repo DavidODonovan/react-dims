@@ -13,7 +13,7 @@ npm i react-dims
 ```
 ### Usage
 
-Wrap the child node in the provider - similar to how you would use a HOC.
+Wrap the child node in the provider, similar to using a HOC.
 
 ParentNode.js
 
@@ -31,7 +31,7 @@ export default ParentNode;
 
 ```
 
-Export the child by passing it to the withContext( ) method, similar to how you would use connect( ) in Redux.
+Export the child by passing it to the withContext( ) method, similar to using Redux connect( ).
 
 ChildNode.js
 

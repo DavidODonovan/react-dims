@@ -14,7 +14,7 @@ Requires React version 16.0.0 or greater.
 npm i react-dims
 ```
 ### Usage
-Use the react-dims Provider to wrap a child component, similar to using a HOC;
+Use the react-dims Provider to wrap a child component, just like using any other Higher Order Component; 
 
 App.js
 

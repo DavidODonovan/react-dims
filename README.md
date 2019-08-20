@@ -1,23 +1,25 @@
 ## react-dims
 
-A simple React Context component can be used to wrap a child component, capture the dimensions of that child, then pass those dims down as props to the child, thereby making that child component aware of what it's dimensions are.
+A simple React component that can be used to wrap a child component, capture the dimensions of that child, then pass those dims down as props to that same child. When the component is resized, props are updated, so the child is always aware of what it's own dimensions are.
 
 Useful for things like wrapping a responsive D3 chart.
 
-Requires React version 16.0.0 or greater. 
+Requires React version 16.0.0 or greater.
 
 ### Installation
 
 ```code
 npm i react-dims
 ```
-### Usage 
+### Usage
+
+Wrap the child node in the provider - similar to how you would use a HOC.
 
 ParentNode.js
 
 ```code
 import { Provider } from 'react-dims';
- 
+
 const ParentNode=()=>{
 	return (
               <Provider>
@@ -28,6 +30,8 @@ const ParentNode=()=>{
 export default ParentNode;
 
 ```
+
+Export the child by passing it to the withContext( ) method, similar to how you would use connect( ) in Redux.
 
 ChildNode.js
 
@@ -44,6 +48,26 @@ const ChildNode=({dims})=>{
 export default withContext(ChildNode);
 ```
 
+Leverages the native JavaScript Element.getBoundingClientRect() method, so props.dims will be an object that looks something like this;
 
+```code
+ {
+		bottom: 113,
+		height: 16,
+		left: 213.015625,
+		right: 286.96875,
+		top: 97,
+		width: 73.953125,
+		x: 213.015625,
+		y: 97
+ }
+```
+### Usage with Redux
 
+If your child component happens to be directly connected to Redux, for example to fetch data, just feed the component to the withContext( ) method, then wrap that entire statement with connect ( ) like so;
 
+```code
+
+export default connect(mapStateToProps, { fetchData })(withContext(ChildNode));
+
+```

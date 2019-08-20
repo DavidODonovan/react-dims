@@ -2,7 +2,7 @@
 
 React-dims is a dimensions provider for React components, enabling you to make any React component self-aware of it's own width, height, x and y coords, by passing them down as props.
 
-When the component is resized, props are updated, so the child is always aware of what it's own dimensions are.
+When the component is resized, props are updated, so the component is always aware of what it's current dimensions are.
 
 Useful for things like wrapping a responsive D3 chart.
 

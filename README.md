@@ -24,11 +24,11 @@ import ChildNode from './ChildNode';
 
 const App=()=>{
   return (
-  <div className='myLayout'> 
-    <Provider>
-      <ChildNode className='coolThing'/>
-    </Provider>
-  <div> 
+    <div className='myLayout'>
+      <Provider>
+        <ChildNode className='coolThing'/>
+      </Provider>
+    <div> 
   )
 }
 export default App;

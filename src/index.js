@@ -36,7 +36,7 @@ export const Provider = (props)=>{
 export const withContext=(ChildComponent)=>{
 	return (props)=>(
 			<ReactLand.Consumer>
-				{(dims)=>(<ChildComponent {...props} incomingDims={dims} />)}
+				{(incomingDims)=>(<ChildComponent {...props} dims={incomingDims} />)}
 			</ReactLand.Consumer>
 		)
 };

@@ -28,9 +28,10 @@ const App=()=>{
       <Provider>
         <ChildNode className='coolThing'/>
       </Provider>
-    <div> 
+    <div>
   )
 }
+
 export default App;
 
 ```

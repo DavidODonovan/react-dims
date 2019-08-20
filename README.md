@@ -2,7 +2,7 @@
 
 React-dims is a dimensions provider for React components, enabling you to make any React component self-aware of it's own DOM width, height, x and y coords, by passing them down as props.
 
-Use the react-dims Provider to wrap a child component, capture the dimensions of that child, then pass those dims down as props to that same child. When the component is resized, props are updated, so the child is always aware of what it's own dimensions are.
+When the component is resized, props are updated, so the child is always aware of what it's own dimensions are.
 
 Useful for things like wrapping a responsive D3 chart.
 
@@ -14,27 +14,28 @@ Requires React version 16.0.0 or greater.
 npm i react-dims
 ```
 ### Usage
+Use the react-dims Provider to wrap a child component, similar to using a HOC;
 
-Wrap the child node in the provider, similar to using a HOC.
-
-ParentNode.js
+App.js
 
 ```code
 import { Provider } from 'react-dims';
+import ChildNode from './ChildNode';
 
-const ParentNode=()=>{
+const App=()=>{
   return (
+  <div className='myLayout'> 
     <Provider>
-      <ChildNode/>
+      <ChildNode className='coolThing'/>
     </Provider>
+  <div> 
   )
 }
-export default ParentNode;
+export default App;
 
 ```
-***
 
-Export the child by passing it to the withContext( ) method, similar to using Redux connect( ).
+Export the child component by passing it to the react-dims withContext( ) method, similar to using Redux connect( );
 
 ChildNode.js
 
@@ -43,14 +44,14 @@ import { withContext } from 'react-dims';
 
 const ChildNode=({dims})=>{  
   return (
-    <div>height is: {dims.height}</div>
+    <div>My height is: {dims.height}!</div>
   )
 }
 
 export default withContext(ChildNode);
 ```
 
-Leverages the native JavaScript Element.getBoundingClientRect() method, so props.dims will be an object that looks something like this;
+Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method, so props.dims will be an object that looks something like this;
 
 ```code
 {

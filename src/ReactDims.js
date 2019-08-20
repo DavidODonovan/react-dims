@@ -5,7 +5,7 @@ const ReactDims = React.createContext(null);
 export const Provider = (props)=>{
   const domNode = useRef(null);
   const [dimensions, setDimensions] = useState({});
-	const [invocationContext, setInvocationContext] = useState(0);
+  const [invocationContext, setInvocationContext] = useState(0);
 
   useEffect(()=>{
     setDimensions(domNode.current.getBoundingClientRect());
@@ -19,9 +19,9 @@ export const Provider = (props)=>{
   const getNodeDimensions = ()=>{
     clearTimeout(invocationContext);
     setInvocationContext(()=>setTimeout(()=>{
-	      setDimensions(domNode.current.getBoundingClientRect());
-	    }, 100)
-		);
+      setDimensions(domNode.current.getBoundingClientRect());
+    }, 100)
+    );
   };
 
   return (

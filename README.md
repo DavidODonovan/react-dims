@@ -1,6 +1,6 @@
 ## react-dims
 
-React-dims is a dimensions provider for React components, enabling you to make any React component self-aware of it's own DOM width, height, x and y coords, by passing them down as props.
+React-dims is a dimensions provider for React components, enabling you to make any React component self-aware of it's own width, height, x and y coords, by passing them down as props.
 
 When the component is resized, props are updated, so the child is always aware of what it's own dimensions are.
 

@@ -40,7 +40,7 @@ import { withContext } from 'react-dims';
 
 const ChildNode=({dims})=>{  
   return (
-    <div>height is: {dims.height}</div
+    <div>height is: {dims.height}</div>
   )
 }
 

@@ -56,7 +56,7 @@ Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/
 ```code
 {
   bottom: 113,
-  height: 16,
+  height: 160,
   left: 213.015625,
   right: 286.96875,
   top: 97,

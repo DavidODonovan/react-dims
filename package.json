@@ -1,7 +1,7 @@
 {
-  "name": "reactland",
+  "name": "react-dims",
   "version": "1.0.0",
-  "description": "A React Context for capturing the dimensions of any React DOM node",
+  "description": "A React Context component for capturing the dimensions of any React DOM node.",
   "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
@@ -15,7 +15,7 @@
   ],
   "license": "ISC",
   "author": "David O'Donovan <david@davidodonovan.com> ",
-  "homepage": "https://github.com/DavidODonovan/reactland",
+  "homepage": "https://github.com/DavidODonovan/react-dims",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",

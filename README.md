@@ -51,14 +51,14 @@ Leverages the native JavaScript Element.getBoundingClientRect() method, so props
 
 ```code
 {
-	bottom: 113,
-	height: 16,
-	left: 213.015625,
-	right: 286.96875,
-	top: 97,
-	width: 73.953125,
-	x: 213.015625,
-	y: 97
+ bottom: 113,
+ height: 16,
+ left: 213.015625,
+ right: 286.96875,
+ top: 97,
+ width: 73.953125,
+ x: 213.015625,
+ y: 97
 }
 ```
 ### Usage with Redux

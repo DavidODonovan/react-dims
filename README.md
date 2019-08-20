@@ -21,11 +21,11 @@ ParentNode.js
 import { Provider } from 'react-dims';
 
 const ParentNode=()=>{
-	return (
-		  <Provider>
-			  <ChildNode/>
-		  </Provider>
-		)
+  return (
+    <Provider>
+      <ChildNode/>
+    </Provider>
+  )
 }
 export default ParentNode;
 
@@ -39,9 +39,9 @@ ChildNode.js
 import { withContext } from 'react-dims';
 
 const ChildNode=({dims})=>{  
-	return (
-      <div>height is: {dims.height}</div
-	  )
+  return (
+    <div>height is: {dims.height}</div
+  )
 }
 
 export default withContext(ChildNode);

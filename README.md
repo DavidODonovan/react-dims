@@ -1,13 +1,17 @@
 ## react-dims
 
-A simple React Context that captures the dimensions of any React DOM node. Requires React version 16.0.0 or greater. 
+A simple React Context component can be used to wrap a child component, capture the dimensions of that child, then pass those dims down as props to the child, thereby making that child component aware of what it's dimensions are.
 
-###Installation
+Useful for things like wrapping a responsive D3 chart.
+
+Requires React version 16.0.0 or greater. 
+
+### Installation
 
 ```code
 npm i react-dims
 ```
-###Usage 
+### Usage 
 
 ParentNode.js
 

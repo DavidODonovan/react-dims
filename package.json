@@ -1,17 +1,20 @@
 {
   "name": "react-dims",
-  "version": "1.0.2",
-  "description": "A React Context component for capturing the dimensions of any React DOM node, and then giving that node access to those dims as props.",
+  "version": "1.0.3",
+  "description": "let your react component know it's own width and height as props, from the very first render",
   "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
   },
   "keywords": [
+    "react-dims",
     "react",
-    "context",
+    "react context",
     "layout",
     "dimensions",
-    "reactland"
+    "higher order component",
+    "hoc",
+    "D3"
   ],
   "license": "ISC",
   "author": "David O'Donovan <david@davidodonovan.com> ",

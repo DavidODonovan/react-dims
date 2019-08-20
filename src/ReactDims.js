@@ -25,18 +25,18 @@ export const Provider = (props)=>{
   };
 
   return (
-      <div ref={domNode} style={{height: '100%'}}>
-        <ReactDims.Provider value={dimensions}>
-					{props.children}
-        </ReactDims.Provider>
-      </div>
+    <div ref={domNode} style={{height: '100%'}}>
+      <ReactDims.Provider value={dimensions}>
+        {props.children}
+      </ReactDims.Provider>
+    </div>
   )
 };
 
 export const withContext=(ChildComponent)=>{
-	return (props)=>(
-			<ReactDims.Consumer>
-				{(incomingDims)=>(<ChildComponent {...props} dims={incomingDims} />)}
-			</ReactDims.Consumer>
-		)
+  return (props)=>(
+        <ReactDims.Consumer>
+          {(incomingDims)=>(<ChildComponent {...props} dims={incomingDims} />)}
+        </ReactDims.Consumer>
+  )
 };

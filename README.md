@@ -6,7 +6,7 @@ When the component is resized, props are updated, so the component is always awa
 
 Useful for things like wrapping a responsive D3 chart.
 
-Requires React version 16.0.0 or greater.
+Requires React version 16.8.0 or greater.
 
 ### Installation
 
@@ -14,7 +14,7 @@ Requires React version 16.0.0 or greater.
 npm i react-dims
 ```
 ### Usage
-Use the react-dims Provider to wrap a child component, just like using any other Higher Order Component; 
+Use the react-dims Provider to wrap a child component, just like using any other Higher Order Component;
 
 App.js
 
@@ -65,6 +65,17 @@ Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/
   y: 97
 }
 ```
+
+### Adjusting Debounce Timer
+
+When your component is resized, the Provider is throttled to fire at a default rate of once every 100ms. You can change the rate by simply passing the provider a prop of 'debounce' with a value which is a number, like so;
+
+```code
+<Provider debounce={300}>
+  <ChildNode/>
+</Provider>
+```
+
 ### Usage with Redux
 
 If your child component happens to be directly connected to Redux, for example to fetch data, just feed the component to the withContext( ) method, then wrap that entire statement with connect ( ) like so;

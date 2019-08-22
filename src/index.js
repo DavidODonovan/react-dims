@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const ReactDims = React.createContext(null);
 
@@ -20,7 +21,7 @@ export const Provider = (props)=>{
     clearTimeout(invocationContext);
     setInvocationContext(()=>setTimeout(()=>{
       setDimensions(domNode.current.getBoundingClientRect());
-    }, 100)
+    }, props.debounce)
     );
   };
 
@@ -32,6 +33,14 @@ export const Provider = (props)=>{
     </div>
   )
 };
+
+Provider.propTypes = {
+  debounce: PropTypes.number
+}
+
+Provider.defaultProps = {
+  debounce: 100
+}
 
 export const withContext=(ChildComponent)=>{
   return (props)=>(

@@ -1,10 +1,33 @@
-## react-dims
+<p align="center"><img src="logo.svg" width=250></p>
+<h2 align="center">React Dims</h2>
+<p align="center">
+<strong>
+A React component to be used when you want to access the dimensions of any React DOM node.
+</strong>
+<br><br>
+
+<!-- downloads per week-->
+<a href="https://npmjs.com/package/react-dims">
+  <img src="https://img.shields.io/npm/dw/react-dims.svg"/>
+</a>
+
+<!-- npm version -->
+<a href="https://npmjs.com/package/react-dims">
+  <img src="https://img.shields.io/npm/v/react-dims.svg"/>
+</a>
+
+<!-- maintenance statuss-->
+<a href="https://github.com/DavidODonovan/react-dims#maintenance-status">
+  <img alt="Maintenance Status" src="https://img.shields.io/badge/maintenance-active-green.svg"/>
+</a>
+
+</p>
 
 React-dims is a dimensions provider for React components, enabling you to make any React component self-aware of it's own width, height, x and y coordinates, by passing them down as props.
 
 When the component is resized, props are updated, so the component is always aware of what it's own dimensions are.
 
-Useful for things like wrapping a responsive D3 chart.
+Useful for things like getting the current dimensions of components that are housed within a CSS grid, or wrapping a responsive D3 chart so you can resize it dynamically using the new width and height.
 
 Requires React version 16.8.0 or greater.
 

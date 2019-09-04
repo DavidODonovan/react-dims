@@ -1,8 +1,8 @@
-<p align="center"><img src="logo.svg" width=250></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/16183533/64230129-459f6f80-cf2f-11e9-8cda-fe1569227458.png" width=250></p>
 <h2 align="center">React Dims</h2>
 <p align="center">
 <strong>
-A React component to be used when you want to access the dimensions of any React DOM node.
+A React wrapper to use when you need a Child component to be aware of it's own dimensions.
 </strong>
 <br><br>
 

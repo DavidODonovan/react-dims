@@ -2,7 +2,7 @@
 <h2 align="center">React Dims</h2>
 <p align="center">
 <strong>
-A React wrapper to use when you need a Child component to be aware of it's own dimensions.
+A React wrapper to use when you need a Child component to be aware of its own dimensions.
 </strong>
 <br><br>
 

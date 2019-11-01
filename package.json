@@ -1,6 +1,6 @@
 {
   "name": "react-dims",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Get the dimensions of any React DOM node - from the very first render.",
   "main": "dist/index.js",
   "scripts": {

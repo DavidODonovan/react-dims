@@ -25,6 +25,9 @@ A React wrapper to use when you need a Child component to be aware of its own di
 
 React-dims is a dimensions provider for React components, enabling you to make any React component self-aware of it's own width, height, x and y coordinates, by passing them down as props.
 
+<strong>NOTE: 11 Apr 2021 ~ UPDATED Repo with useReactDims hook</strong>
+Added a beta version of new hook which is *much* nicer to use. See example in the useReactDims directory. This hook will become ReactDims v2.0, when I have tested and refined it. Enjoy! 😁
+
 When the component is resized, props are updated, so the component is always aware of what it's own dimensions are.
 
 Useful for things like getting the current dimensions of components that are housed within a CSS grid, or wrapping a responsive D3 chart so you can resize it dynamically using the new width and height.

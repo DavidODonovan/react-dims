@@ -1,2 +1,2 @@
-export * from './useReactDims';
+export * from './useDims';
 export * from './contextProvider';

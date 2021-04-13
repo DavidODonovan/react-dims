@@ -21,9 +21,11 @@ export const Grid=styled.div`
 export const CoolThing=styled.div`
   background: orange;
   grid-area: 2/2/3/3;
+  padding: 0.1rem;
 `;
 
 export const AnotherCoolThing=styled.div`
   background: blue;
   grid-area: 3/3/4/4;
+  padding: 0.1rem;
 `;

@@ -2,7 +2,7 @@
 <h2 align="center">React Dims</h2>
 <p align="center">
 <strong>
-A React wrapper to use when you need a Child component to be aware of its own dimensions.
+A simple to use React hook that makes any element in your layout aware of its own dimensions.
 </strong>
 <br><br>
 
@@ -22,13 +22,29 @@ A React wrapper to use when you need a Child component to be aware of its own di
 </a>
 
 </p>
-<strong>NOTE: 14 Apr 2021 ~ react-dims now exports the 'useDims' hook</strong>
 
-Using the useDims() hook inside any React JSX element will give you it's width, height, x and y coordinates. This is useful for making responsive graphs and charts that are grid/flex items,  For example fully responsive d3.js charts, responsive dashboards, or responsive canvas animations.
+<p>
+<strong>NOTE: 14 Apr 2021 ~ react-dims now exports the useDims() hook! 👍</strong>
+</p>
 
+<p>
+Invoking useDims() inside any React JSX element will give you it's width, height, x and y coordinates.
+</p>
+<p>
+Very useful for making responsive graphs and charts that live inside grid & flex layouts.  
+</p>
+
+<p>
+For example fully responsive d3.js charts, responsive dashboards, or responsive canvas animations.
+</p>
+
+<p>
 When the element/browser window is resized, the hook fires again, making your element continuously aware of what it's own dimensions are.
+</p>
 
+<p>
 Requires React version 16.8.0 or greater.
+</p>
 
 ### Installation
 
@@ -36,20 +52,20 @@ Requires React version 16.8.0 or greater.
 npm i react-dims
 ```
 ### Usage
-Use the react-dims Provider to wrap a child component, just like using any other Higher Order Component;
+See example code [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples)
+
+The useDims() hook returns a useRef hook and a dimensions object:
+```
 
 App.js
 
 ```code
-import { Provider } from 'react-dims';
-import ChildNode from './ChildNode';
+import { useDims } from 'react-dims';
 
 const App=()=>{
   return (
     <div className='myLayout'>
-      <Provider>
         <ChildNode className='coolThing'/>
-      </Provider>
     <div>
   )
 }

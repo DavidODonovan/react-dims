@@ -34,7 +34,7 @@
     "react": "^16.8.0 || ^17.0.1"
   },
   "files": [
-    "dist/*"
+    "dist"
   ],
   "dependencies": {
     "prop-types": "^15.7.2"

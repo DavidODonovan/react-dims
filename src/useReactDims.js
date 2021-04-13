@@ -5,11 +5,22 @@ const useReactDims = (props)=>{
   const [dimensions, setDimensions] = useState({});
   const [timeoutID, newTimeoutID] = useState(null);
 
+  const warning=()=>{
+    console.warn("useReactDims hook needs to be attached to a dom element before it can return a value: eg: <div ref={domNode}/>")
+  };
+
   useEffect(()=>{
+    if(!domNode.current){
+      warning();
+      return;
+    };
     setDimensions(domNode.current.getBoundingClientRect());
   },[]);
 
   useEffect(()=>{
+    if(!domNode.current){
+      return;
+    };
     const getNodeDimensions=()=>{
       clearTimeout(timeoutID);
       newTimeoutID(setTimeout(()=>{

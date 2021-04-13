@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 
-// TODO: test then publish breaking changes and new docs to npm
-
-const useReactDims = (props)=>{
+const useReactDims=(props)=>{
   const domNode = useRef(null);
   const [dimensions, setDimensions] = useState({});
   const [timeoutID, newTimeoutID] = useState(null);

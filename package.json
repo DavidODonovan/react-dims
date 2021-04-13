@@ -1,20 +1,23 @@
 {
   "name": "react-dims",
   "version": "1.0.8",
-  "description": "Get the dimensions of any React DOM node - from the very first render.",
+  "description": "A React hook that gives you the dimensions of any React element in your app.",
   "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
   },
   "keywords": [
+    "react-hook",
     "react-dims",
     "react",
-    "react context",
-    "layout",
+    "dom node dimensions",
     "dimensions",
-    "higher order component",
-    "hoc",
-    "D3"
+    "d3.js",
+    "d3",
+    "layout",
+    "grid",
+    "canvas",
+    "data viz"
   ],
   "license": "ISC",
   "author": "David O'Donovan <david@davidodonovan.com> ",

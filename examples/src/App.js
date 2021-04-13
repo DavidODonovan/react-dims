@@ -1,11 +1,26 @@
-import { useReactDims } from 'react-dims';
+import { Grid, CoolThing, AnotherCoolThing } from './style';
+import { useReactDims, withContext } from 'react-dims'
 
-const App=()=>{
+const Dashboard=()=>{
   const [domNode, dims] = useReactDims();
+  const [anotherDomNode, anotherDims] = useReactDims();
 
   return (
-    <div ref={domNode}>lkajsd</div>
-  );
-}
+      <Grid>
+        <CoolThing ref={domNode}>
+          {dims.height}
+          <br/>
+          {dims.width}
+        </CoolThing>
 
-export default App;
+        <AnotherCoolThing ref={anotherDomNode}>
+          {anotherDims.height}
+          <br/>
+          {anotherDims.width}
+        </AnotherCoolThing>
+
+      </Grid>
+  );
+};
+
+export default Dashboard;

@@ -1,9 +1,9 @@
 import { Grid, CoolThing, AnotherCoolThing } from './style';
-import { useReactDims, withContext } from 'react-dims'
+import { useDims } from 'react-dims'
 
 const Dashboard=()=>{
-  const [domNode, dims] = useReactDims();
-  const [anotherDomNode, anotherDims] = useReactDims();
+  const [domNode, dims] = useDims();
+  const [anotherDomNode, anotherDims] = useDims();
 
   return (
       <Grid>

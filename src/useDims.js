@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 
-const useReactDims = (props)=>{
+export const useDims = (props)=>{
   const domNode = useRef(null);
   const [dimensions, setDimensions] = useState({});
   const [timeoutID, newTimeoutID] = useState(null);
@@ -36,5 +36,3 @@ const useReactDims = (props)=>{
     [domNode, dimensions]
   );
 };
-
-export default useReactDims;

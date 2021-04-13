@@ -4,7 +4,7 @@ const App=()=>{
   const [domNode, dims] = useReactDims();
 
   return (
-    <div>lkajsd</div>
+    <div ref={domNode}>lkajsd</div>
   );
 }
 

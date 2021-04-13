@@ -4,7 +4,8 @@
   "description": "A React hook that gives you the dimensions of any React element in your app.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
+    "prebuild": "npm i",
+    "build": "babel src --out-dir dist"
   },
   "keywords": [
     "react-hook",
@@ -30,7 +31,7 @@
     "react": "^16.9.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.8.0 || ^17.0.1"
   },
   "files": [
     "dist/*"

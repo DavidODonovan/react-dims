@@ -8,9 +8,10 @@ const Dashboard=()=>{
   return (
       <Grid>
         <CoolThing ref={domNode}>
-          {dims.height}
+          my height: {dims.height}
           <br/>
-          {dims.width}
+          <br/>
+          my width: {dims.width}
         </CoolThing>
 
         <AnotherCoolThing ref={anotherDomNode}>

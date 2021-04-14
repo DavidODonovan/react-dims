@@ -24,14 +24,14 @@ A simple to use React hook that makes any element in your layout aware of its ow
 </p>
 
 <p>
-<strong>NOTE: 14 Apr 2021 ~ react-dims now exports the useDims() hook! 👍</strong>
+<strong>NOTE: 14 Apr 2021 ~ react-dims now exports the useDims() hook ~  <em>much</em> nicer to use...👍</strong>
 </p>
 
 <p>
-Invoking useDims() inside any React JSX element will give you it's width, height, x and y coordinates.
+Invoke useDims() inside any React JSX element and it will give you it's width, height, plus x and y coordinates.
 </p>
 <p>
-Very useful for making responsive graphs and charts that live inside grid & flex layouts.  
+Very useful for making responsive graphs and charts that live inside responsive grid & flex layouts.  
 </p>
 
 <p>
@@ -39,7 +39,7 @@ For example fully responsive d3.js charts, responsive dashboards, or responsive 
 </p>
 
 <p>
-When the element/browser window is resized, the hook fires again, making your element continuously aware of what it's own dimensions are.
+When the element is resized, the hook fires again, making your element immediately aware of what it's new dimensions are.
 </p>
 
 <p>
@@ -52,12 +52,34 @@ Requires React version 16.8.0 or greater.
 npm i react-dims
 ```
 ### Usage
-See example code [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples)
+See example usage [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples)
 
-The useDims() hook returns a useRef hook and a dimensions object:
+Or simply invoke the inside any React element and start playing:
 
 
-Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method, so dims will be an object that looks something like this;
+```code
+import { useDims } from 'react-dims';
+
+const Dashboard=()=>{
+  const [domNode, dims] = useDims();
+
+  return (
+    <div
+      ref={domNode}
+      className="gridLayout"
+      >
+      My height is: {dims.height}
+      <br/>
+      My width is: {dims.width}
+    </div>
+    );
+};
+
+```
+
+
+
+This hook leverages the native [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method, so dims will be an object that looks something like this;
 
 ```code
 {
@@ -71,3 +93,5 @@ Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/
   y: 97
 }
 ```
+### A Guide for Responsive d3.js Charts
+If you are interested in learning how to create responsive d3.js charts,  [see this medium article](https://medium.com/nightingale/d3-and-react-a-design-pattern-for-responsive-charts-f77337d37ab9),  which will walk you through your first responsive d3 chart inside of React! 👍

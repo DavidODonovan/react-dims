@@ -1,4 +1,9 @@
-### useDims() example
+### useDims() example App
+
+This examples directory was bootstrapped using create-react-app and contains a simple example of react-dims in use.
+
+To run the app, download the parent repo, navigate here to the examples directory, then install deps `npm i` and start app: `npm start`
+
 
 ```code
 import { useDims } from 'react-dims';

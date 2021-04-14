@@ -7,7 +7,6 @@
 A React hook that gives you the dimensions of any element in your layout. Tooooo easy!
 </strong>
 <br><br>
-Â
 <!-- downloads per week-->
 <a href="https://npmjs.com/package/react-dims">
   <img src="https://img.shields.io/npm/dw/react-dims.svg"/>

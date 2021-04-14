@@ -1,4 +1,5 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/16183533/64230129-459f6f80-cf2f-11e9-8cda-fe1569227458.png" width=250></p>
+<p align="center"><img src="https://github.com/DavidODonovan/react-dims/blob/master/darkLogo.png?raw=true" width=250></p>
+
 <h2 align="center">React Dims</h2>
 <p align="center">
 <strong>
@@ -61,7 +62,7 @@ Or simply invoke the hook inside any React element and start playing:
 import { useDims } from 'react-dims';
 
 const Dashboard=()=>{
-  
+
   const [domNode, dims] = useDims();
 
   return (

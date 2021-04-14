@@ -24,7 +24,7 @@ A simple to use React hook that makes any element in your layout aware of its ow
 </p>
 
 <p>
-<strong>NOTE: 14 Apr 2021 ~ react-dims now exports the useDims() hook ~  <em>much</em> nicer to use...👍</strong>
+<strong>NOTE: 14 Apr 2021 ~ react-dims now exports the useDims() hook ~  <em>much</em> nicer to 'use'...  👍</strong>
 </p>
 
 <p>
@@ -54,13 +54,14 @@ npm i react-dims
 ### Usage
 See example usage [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples)
 
-Or simply invoke the inside any React element and start playing:
+Or simply invoke the hook inside any React element and start playing:
 
 
 ```code
 import { useDims } from 'react-dims';
 
 const Dashboard=()=>{
+  
   const [domNode, dims] = useDims();
 
   return (

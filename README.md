@@ -55,41 +55,9 @@ npm i react-dims
 See example code [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples)
 
 The useDims() hook returns a useRef hook and a dimensions object:
-```
 
-App.js
 
-```code
-import { useDims } from 'react-dims';
-
-const App=()=>{
-  return (
-    <div className='myLayout'>
-        <ChildNode className='coolThing'/>
-    <div>
-  )
-}
-
-export default App;
-```
-
-Export the child component by passing it to the react-dims withContext( ) method, similar to using Redux connect( );
-
-ChildNode.js
-
-```code
-import { withContext } from 'react-dims';
-
-const ChildNode=({dims})=>{  
-  return (
-    <div>My height is: {dims.height}!</div>
-  )
-}
-
-export default withContext(ChildNode);
-```
-
-Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method, so props.dims will be an object that looks something like this;
+Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method, so dims will be an object that looks something like this;
 
 ```code
 {
@@ -102,24 +70,4 @@ Leverages the native [.getBoundingClientRect(  )](https://developer.mozilla.org/
   x: 213.015625,
   y: 97
 }
-```
-
-### Adjusting Debounce Timer
-
-When your component is resized, the Provider is throttled to fire at a default rate of once every 100ms. You can change the rate by simply passing the provider a prop of 'debounce' with a value which is a number, like so;
-
-```code
-<Provider debounce={300}>
-  <ChildNode/>
-</Provider>
-```
-
-### Usage with Redux
-
-If your child component happens to be directly connected to Redux, for example to fetch data, just feed the component to the withContext( ) method, then wrap that entire statement with connect ( ) like so;
-
-```code
-
-export default connect(mapStateToProps, { fetchData })(withContext(ChildNode));
-
 ```

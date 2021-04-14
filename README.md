@@ -1,12 +1,13 @@
-<p align="center"><img src="https://github.com/DavidODonovan/react-dims/blob/master/darkLogo.png?raw=true" width=250></p>
+<p align="center"><img src="https://raw.githubusercontent.com/DavidODonovan/react-dims/master/darkLogo.jpg" width=250></p>
+
 
 <h2 align="center">React Dims</h2>
 <p align="center">
 <strong>
-A simple to use React hook that makes any element in your layout aware of its own dimensions.
+A React hook that gives you the dimensions of any element in your layout. Tooooo easy!
 </strong>
 <br><br>
-
+Â
 <!-- downloads per week-->
 <a href="https://npmjs.com/package/react-dims">
   <img src="https://img.shields.io/npm/dw/react-dims.svg"/>
@@ -28,35 +29,12 @@ A simple to use React hook that makes any element in your layout aware of its ow
 <strong>NOTE: 14 Apr 2021 ~ react-dims now exports the useDims() hook ~  <em>much</em> nicer to 'use'...  👍</strong>
 </p>
 
-<p>
-Invoke useDims() inside any React JSX element and it will give you it's width, height, plus x and y coordinates.
-</p>
-<p>
-Very useful for making responsive graphs and charts that live inside responsive grid & flex layouts.  
-</p>
-
-<p>
-For example fully responsive d3.js charts, responsive dashboards, or responsive canvas animations.
-</p>
-
-<p>
-When the element is resized, the hook fires again, making your element immediately aware of what it's new dimensions are.
-</p>
-
-<p>
-Requires React version 16.8.0 or greater.
-</p>
-
-### Installation
+#### Installation
 
 ```code
 npm i react-dims
 ```
-### Usage
-See example usage [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples)
-
-Or simply invoke the hook inside any React element and start playing:
-
+#### Simple Use Case
 
 ```code
 import { useDims } from 'react-dims';
@@ -78,7 +56,19 @@ const Dashboard=()=>{
 };
 
 ```
+See example [here on github ](https://github.com/DavidODonovan/react-dims/tree/master/examples).
 
+<p>
+Invoke <strong>useDims( )</strong>  inside any React JSX element and it will give you it's width, height, plus x and y coordinates.
+</p>
+<p>
+Very useful for making responsive d3.js charts that live inside responsive grid containers. Use multiple times for all components inside responsive dashboards.
+When the element is resized, the hook fires again, making your element immediately aware of what it's new dimensions are.
+</p>
+
+<p>
+Requires React version 16.8.0 or greater.
+</p>
 
 
 This hook leverages the native [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method, so dims will be an object that looks something like this;

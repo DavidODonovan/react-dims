@@ -45,7 +45,7 @@ const Dashboard=()=>{
   return (
     <div
       ref={domNode}
-      className="gridLayout"
+      className="myCanvas"
       >
       My height is: {dims.height}
       <br/>
